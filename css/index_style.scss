@@ -1,0 +1,356 @@
+//general
+
+
+
+$font: 'Roboto', sans-serif;
+$fontColor: #F3F3F3;
+$bigFontColor: #333333;
+$yellow: #FDAC29;
+$shadow: 6px 0px 12px rgba(0,0,0,0.21),
+         -6px 0px 12px rgba(0,0,0,0.21),
+         0px 9px 12px rgba(0,0,0,0.21);
+$shadowTwo: 6px 3px 12px rgba(0,0,0,0.21),
+            -6px 3px 12px rgba(0,0,0,0.21),
+            0px 9px 12px rgba(0,0,0,0.21);
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+	
+}
+
+
+
+
+
+
+.container h1 {
+    color: white;
+}
+
+.flex{
+    display: flex;
+	background-color: transparent;
+	width:auto;
+	
+}
+
+
+.mainContainer{
+    width: 100%;
+	
+    height: auto;
+    flex-flow: column;
+	
+	
+	
+}
+
+//index
+
+.containerHero{
+    width: auto;
+    height: auto;
+    flex-flow: column;
+	
+    .hero{
+        height: 12vh;
+        width: 100%;
+        background: transparent;
+        box-shadow: $shadow;
+    }
+
+}
+
+
+nav{
+    height: 9vh;
+    width: auto;
+    
+    flex-direction: row;
+    align-items: center;
+    a{
+        height: 100%;
+        width: 100%;
+    }
+    img{
+        height: 200%;
+margin-top: -3vh;
+		
+    }
+    ul{
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 2vh;
+		background-color: green;
+        li{
+            width: auto;
+            display: inline-block;
+            font-family: $font;
+            color: $fontColor;
+            font-weight: 400;
+            font-size: 2.3vh;
+            padding-bottom: 1vh;
+            border-bottom: 2px solid transparent;
+			background-color: transparent;
+            &:hover{
+                border-bottom: 2px solid $yellow;
+            }
+            &:active{
+                border-bottom: 2px solid $yellow;
+            }
+        }
+        a{
+            text-decoration: none;
+            padding: 0 3vw;
+            width: auto;
+            height: auto;
+			background-color: transparent;
+        }
+    }
+}
+
+
+
+
+
+
+
+#video-background {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+h1 {
+  position: absolute;
+  bottom: 1%;
+  left:5%;
+  width: 94%;
+  font-size: 36px;
+
+  letter-spacing: 5px;
+  color: #fff;
+  font-family: $font;
+  text-align: center;
+}
+
+.main {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  z-index: 15;
+  top: 30%;
+  left: 47%;
+  margin: -100px 0 0 -150px;
+
+  
+   
+}
+h3 {
+	color: $yellow;
+}
+.mainent {
+position: absolute;
+  width: 500px;
+ font-family: $font;
+  z-index: 15;
+  top: 30%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  background: rgba(85,65,43, 0.5);
+  color:black;
+	font-weight: 600;
+font-family: $font;
+	border-radius: 15px;
+}
+
+.fieldset {
+	border-radius: 15px;
+}
+.default {
+  padding-top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	position:relative;
+}
+
+.default a {
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	box-sizing: border-box;
+}
+
+.button:focus {
+  outline: none;
+}
+
+
+.button {
+  text-transform: uppercase;
+  float: left;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  padding: 1em 2em;
+  background: none;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid;
+  cursor:pointer;
+
+}
+
+
+
+.button::after {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0;
+  color: #f39b33;
+  z-index: -1;
+}
+
+.button:hover::after {
+  opacity: 1;
+  background-color: $yellow;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.button,
+.button:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.button:hover {
+  border: 2px solid $yellow;
+}
+
+
+a.expand {
+  border: none;
+}
+
+a.expand::before {
+  content: '';
+ 
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  right: -25%;
+  bottom: -25%;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: $yellow;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+    background-color: #f39b33;
+}
+
+.login {
+    border-radius: 5px;
+    
+    padding: 20px;
+	width: 30%;
+	margin: 0 auto;
+	font-family:$font;
+	color: white;
+}	
+
+.signup {
+	border-radius: 5px;
+    
+   
+	width: 30%;
+	margin: 0 auto;
+	font-family:$font;
+	color: white;
+}
+
+.message {
+	
+	margin-top: 80px;
+	height: 50px;
+	text-align: center;
+	
+    border-radius: 4px;
+	color: $yellow;
+}
+
+.message a {
+	height: 30px;
+	color: $yellow;
+	display: block;
+}
